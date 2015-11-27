@@ -1,16 +1,16 @@
 <?php
 
 class Amadeus_Recent_Posts extends WP_Widget {
-
-    function amadeus_recent_posts() {
+	
+	function __construct() {
 		$widget_ops = array('classname' => 'amadeus_recent_posts_widget', 'description' => __( 'Recent posts with thumbnails.', 'amadeus') );
-        parent::WP_Widget(false, $name = __('Amadeus: Recent Posts', 'amadeus'), $widget_ops);
+		parent::__construct('amadeus_recent_posts_widget', __('Amadeus: Recent Posts', 'amadeus'), $widget_ops);
 		$this->alt_option_name = 'amadeus_recent_posts_widget';
-		
+
 		add_action( 'save_post', array($this, 'flush_widget_cache') );
 		add_action( 'deleted_post', array($this, 'flush_widget_cache') );
 		add_action( 'switch_theme', array($this, 'flush_widget_cache') );		
-    }
+	}
 	
 	function form($instance) {
 		$title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';

@@ -1,18 +1,17 @@
 <?php
 
 class Amadeus_Video extends WP_Widget {
-
-// constructor
-    function amadeus_video() {
+	
+	function __construct() {
 		$widget_ops = array('classname' => 'amadeus_video_widget', 'description' => __( 'Display an oEmbed video.', 'amadeus') );
-        parent::WP_Widget(false, $name = __('Amadeus: Video', 'amadeus'), $widget_ops);
+		parent::__construct('amadeus_video', __('Amadeus: Video', 'amadeus'), $widget_ops);
 		$this->alt_option_name = 'amadeus_video';
-		
+
 		add_action( 'save_post', array($this, 'flush_widget_cache') );
 		add_action( 'deleted_post', array($this, 'flush_widget_cache') );
 		add_action( 'switch_theme', array($this, 'flush_widget_cache') );		
-    }
-	
+	}
+
 	// widget form creation
 	function form($instance) {
 
