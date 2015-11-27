@@ -200,11 +200,11 @@ add_filter( 'excerpt_length', 'amadeus_excerpt_length', 999 );
  */
 
 function amadeus_footer_credits() {
-	echo '<a href="' . esc_url( __( 'http://wordpress.org/', 'amadeus' ) ) . '">';
+	echo '<a href="' . esc_url( __( 'http://wordpress.org/', 'amadeus' ) ) . '" rel="nofollow">';
 		printf( __( 'Proudly powered by %s', 'amadeus' ), 'WordPress' );
 	echo '</a>';
 	echo '<span class="sep"> | </span>';
-	printf( __( 'Theme: %2$s by %1$s.', 'amadeus' ), 'FlyFreeMedia', '<a href="http://flyfreemedia.com/themes/amadeus" rel="designer">Amadeus</a>' );
+	printf( __( 'Theme: %2$s by %1$s.', 'amadeus' ), 'Themeisle', '<a href="http://themeisle.com/themes/amadeus/" rel="nofollow">Amadeus</a>' );
 }
 add_action( 'amadeus_footer', 'amadeus_footer_credits' );
 
