@@ -31,7 +31,7 @@ function amadeus_setup() {
 	global $content_width;
 	if ( ! isset( $content_width ) ) {
 		$content_width = 1040;
-	}	
+	}
 
 	/*
 	 * Let WordPress manage the document title.
@@ -110,7 +110,7 @@ function amadeus_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
-	) );	
+	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer right', 'amadeus' ),
 		'id'            => 'sidebar-6',
@@ -118,7 +118,7 @@ function amadeus_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
-	) );	
+	) );
 
 	//Custom widgets
 	register_widget( 'Amadeus_Video' );
@@ -142,28 +142,28 @@ function amadeus_scripts() {
 	wp_enqueue_style( 'amadeus-bootstrap', get_template_directory_uri() . '/css/bootstrap/css/bootstrap.min.css', array(), true );
 
 	if ( get_theme_mod('body_font_name') !='' ) {
-	    wp_enqueue_style( 'amadeus-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_name')) ); 
+	    wp_enqueue_style( 'amadeus-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_name')) );
 	} else {
 	    wp_enqueue_style( 'amadeus-body-fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic');
 	}
 
 	if ( get_theme_mod('headings_font_name') !='' ) {
-	    wp_enqueue_style( 'amadeus-headings-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('headings_font_name')) ); 
+	    wp_enqueue_style( 'amadeus-headings-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('headings_font_name')) );
 	} else {
-	    wp_enqueue_style( 'amadeus-headings-fonts', '//fonts.googleapis.com/css?family=Playfair+Display:400,700'); 
-	}	
+	    wp_enqueue_style( 'amadeus-headings-fonts', '//fonts.googleapis.com/css?family=Playfair+Display:400,700');
+	}
 
 	wp_enqueue_style( 'amadeus-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'amadeus-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );	
+	wp_enqueue_style( 'amadeus-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );
 
-	wp_enqueue_script( 'amadeus-parallax', get_template_directory_uri() . '/js/parallax.min.js', array('jquery'), true );	
+	wp_enqueue_script( 'amadeus-parallax', get_template_directory_uri() . '/js/parallax.min.js', array('jquery'), true );
 
-	wp_enqueue_script( 'amadeus-slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), true );	
+	wp_enqueue_script( 'amadeus-slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), true );
 
-	wp_enqueue_script( 'amadeus-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.min.js', array('jquery'), true );				
+	wp_enqueue_script( 'amadeus-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.min.js', array('jquery'), true );
 
-	wp_enqueue_script( 'amadeus-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );	
+	wp_enqueue_script( 'amadeus-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );
 
 	wp_enqueue_script( 'amadeus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -180,10 +180,73 @@ add_action( 'wp_enqueue_scripts', 'amadeus_scripts' );
  */
 function amadeus_customizer_styles() {
 
-	wp_enqueue_style( 'amadeus-customizer-styles', get_template_directory_uri() . '/css/customizer.css' );	
+	wp_enqueue_style( 'amadeus-customizer-styles', get_template_directory_uri() . '/css/customizer.css' );
 
 }
 add_action( 'customize_controls_print_styles', 'amadeus_customizer_styles' );
+
+/* tgm-plugin-activation */
+require_once get_template_directory() . '/class-tgm-plugin-activation.php';
+
+/**
+ * TGMPA register
+ */
+function amadeus_register_required_plugins() {
+		$plugins = array(
+
+			array(
+				'name'      => 'WP Product Reviews',
+				'slug'      => 'wp-product-reviews',
+				'required'  => false,
+			),
+
+			array(
+				'name'      => 'Intergeo Maps - Google Maps Plugin',
+				'slug'      => 'intergeo-maps',
+				'required'  => false
+			),
+
+			array(
+				'name'     => 'Pirate Forms',
+				'slug' 	   => 'pirate-forms',
+				'required' => false
+			));
+
+	$config = array(
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
+        'has_notices'  => true,
+        'dismissable'  => true,
+        'dismiss_msg'  => '',
+        'is_automatic' => false,
+        'message'      => '',
+        'strings'      => array(
+            'page_title'                      => esc_html__( 'Install Required Plugins', 'amadeus' ),
+            'menu_title'                      => esc_html__( 'Install Plugins', 'amadeus' ),
+            'installing'                      => esc_html__( 'Installing Plugin: %s', 'amadeus' ),
+            'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'amadeus' ),
+            'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'amadeus' ),
+            'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'amadeus' ),
+            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'amadeus' ),
+            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'amadeus' ),
+            'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'amadeus' ),
+            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'amadeus' ),
+            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'amadeus' ),
+            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'amadeus' ),
+            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'amadeus' ),
+            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'amadeus' ),
+            'return'                          => esc_html__( 'Return to Required Plugins Installer', 'amadeus' ),
+            'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'amadeus' ),
+            'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'amadeus' ),
+            'nag_type'                        => 'updated'
+        )
+    );
+
+	tgmpa( $plugins, $config );
+
+}
+add_action( 'tgmpa_register', 'amadeus_register_required_plugins' );
+
 
 /**
  * Change the excerpt length
