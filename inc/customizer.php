@@ -88,7 +88,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '200',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'logo_size', array(
         'type'        => 'number',
@@ -131,7 +131,7 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '75',
-        )       
+        )
     );
     $wp_customize->add_control( 'branding_padding', array(
         'type'        => 'number',
@@ -153,7 +153,7 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'title'    => __('Menu position', 'amadeus'),
             'priority' => 13,
-            'panel'    => 'amadeus_header_panel', 
+            'panel'    => 'amadeus_header_panel',
         )
     );
     //Menu position
@@ -186,7 +186,7 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'title'    => __('Banner type', 'amadeus'),
             'priority' => 11,
-            'panel'    => 'amadeus_header_panel', 
+            'panel'    => 'amadeus_header_panel',
         )
     );
     //Banner type
@@ -216,8 +216,8 @@ function amadeus_customize_register( $wp_customize ) {
         'hide_banner',
         array(
             'sanitize_callback' => 'amadeus_sanitize_checkbox',
-            'default' => 0,     
-        )   
+            'default' => 0,
+        )
     );
     $wp_customize->add_control(
         'hide_banner',
@@ -227,7 +227,7 @@ function amadeus_customize_register( $wp_customize ) {
             'section' => 'amadeus_banner',
             'priority' => 17,
         )
-    );     
+    );
     //Meta shortcode
     $wp_customize->add_setting(
         'metaslider_shortcode',
@@ -254,7 +254,7 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '300',
-        )       
+        )
     );
     $wp_customize->add_control( 'header_img_height', array(
         'type'        => 'number',
@@ -274,14 +274,14 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '300',
-        )       
+        )
     );
     $wp_customize->add_control( 'header_img_height_1024', array(
         'type'        => 'number',
         'priority'    => 20,
         'section'     => 'header_image',
         'label'       => __('Header image height < 1024px', 'amadeus'),
-        'description' => __('Set your header image height for screen widths smaller than 1024px', 'amadeus'),        
+        'description' => __('Set your header image height for screen widths smaller than 1024px', 'amadeus'),
         'input_attrs' => array(
             'min'   => 50,
             'max'   => 650,
@@ -294,8 +294,8 @@ function amadeus_customize_register( $wp_customize ) {
 		'hide_scroll',
 		array(
 			'sanitize_callback' => 'amadeus_sanitize_checkbox',
-			'default' => 0,     
-		)   
+			'default' => 0,
+		)
     );
     $wp_customize->add_control(
 		'hide_scroll',
@@ -305,7 +305,7 @@ function amadeus_customize_register( $wp_customize ) {
 			'section' => 'header_image',
 			'priority' => 21,
 		)
-    );    
+    );
 
     //___Blog options___//
     $wp_customize->add_section(
@@ -321,7 +321,7 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '55',
-        )       
+        )
     );
     $wp_customize->add_control( 'exc_lenght', array(
         'type'        => 'number',
@@ -335,14 +335,14 @@ function amadeus_customize_register( $wp_customize ) {
             'step'  => 5,
             'style' => 'padding: 15px;',
         ),
-    ) );   
+    ) );
     //Hide meta
     $wp_customize->add_setting(
       'meta_index',
       array(
         'sanitize_callback' => 'amadeus_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'meta_index',
@@ -357,8 +357,8 @@ function amadeus_customize_register( $wp_customize ) {
       'meta_singles',
       array(
         'sanitize_callback' => 'amadeus_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'meta_singles',
@@ -373,8 +373,8 @@ function amadeus_customize_register( $wp_customize ) {
       'hide_sidebar_index',
       array(
         'sanitize_callback' => 'amadeus_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'hide_sidebar_index',
@@ -389,8 +389,8 @@ function amadeus_customize_register( $wp_customize ) {
       'hide_sidebar_single',
       array(
         'sanitize_callback' => 'amadeus_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'hide_sidebar_single',
@@ -406,8 +406,8 @@ function amadeus_customize_register( $wp_customize ) {
       'full_content',
       array(
         'sanitize_callback' => 'amadeus_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
         'full_content',
@@ -417,13 +417,13 @@ function amadeus_customize_register( $wp_customize ) {
             'section' => 'blog_options',
             'priority' => 14,
         )
-    ); 
+    );
     //Index images
     $wp_customize->add_setting(
         'index_feat_image',
         array(
             'sanitize_callback' => 'amadeus_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'index_feat_image',
@@ -439,7 +439,7 @@ function amadeus_customize_register( $wp_customize ) {
         'post_feat_image',
         array(
             'sanitize_callback' => 'amadeus_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'post_feat_image',
@@ -519,7 +519,7 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'default'           => '#fff',
             'sanitize_callback' => 'sanitize_hex_color',
-            'transport'         => 'postMessage'            
+            'transport'         => 'postMessage'
         )
     );
     $wp_customize->add_control(
@@ -540,7 +540,7 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'default'           => '#fff',
             'sanitize_callback' => 'sanitize_hex_color',
-            'transport'         => 'postMessage'            
+            'transport'         => 'postMessage'
         )
     );
     $wp_customize->add_control(
@@ -561,7 +561,7 @@ function amadeus_customize_register( $wp_customize ) {
         array(
             'default'           => '#1c1c1c',
             'sanitize_callback' => 'sanitize_hex_color',
-            'transport'         => 'postMessage'            
+            'transport'         => 'postMessage'
         )
     );
     $wp_customize->add_control(
@@ -636,7 +636,7 @@ function amadeus_customize_register( $wp_customize ) {
                 'priority' => 20
             )
         )
-    );  
+    );
     //Entry meta
     $wp_customize->add_setting(
         'entry_meta',
@@ -656,7 +656,7 @@ function amadeus_customize_register( $wp_customize ) {
                 'priority' => 21
             )
         )
-    );    
+    );
     //Body
     $wp_customize->add_setting(
         'body_text_color',
@@ -677,7 +677,7 @@ function amadeus_customize_register( $wp_customize ) {
                 'priority' => 22
             )
         )
-    ); 
+    );
     //Footer
     $wp_customize->add_setting(
         'footer_bg',
@@ -741,7 +741,7 @@ function amadeus_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 12
         )
-    );   
+    );
     //Headings fonts
     $wp_customize->add_setting(
         'headings_font_name',
@@ -783,7 +783,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '62',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'site_title_size', array(
         'type'        => 'number',
@@ -796,7 +796,7 @@ function amadeus_customize_register( $wp_customize ) {
             'step'  => 1,
             'style' => 'margin-bottom: 15px; padding: 10px;',
         ),
-    ) ); 
+    ) );
     // Site description
     $wp_customize->add_setting(
         'site_desc_size',
@@ -804,7 +804,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '18',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'site_desc_size', array(
         'type'        => 'number',
@@ -817,7 +817,7 @@ function amadeus_customize_register( $wp_customize ) {
             'step'  => 1,
             'style' => 'margin-bottom: 15px; padding: 10px;',
         ),
-    ) );         
+    ) );
     //H1 size
     $wp_customize->add_setting(
         'h1_size',
@@ -825,7 +825,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '38',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h1_size', array(
         'type'        => 'number',
@@ -846,7 +846,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '30',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h2_size', array(
         'type'        => 'number',
@@ -867,7 +867,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '24',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h3_size', array(
         'type'        => 'number',
@@ -888,7 +888,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '18',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h4_size', array(
         'type'        => 'number',
@@ -909,7 +909,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '14',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h5_size', array(
         'type'        => 'number',
@@ -930,7 +930,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '12',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h6_size', array(
         'type'        => 'number',
@@ -951,7 +951,7 @@ function amadeus_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '15',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'body_size', array(
         'type'        => 'number',
@@ -964,29 +964,7 @@ function amadeus_customize_register( $wp_customize ) {
             'step'  => 1,
             'style' => 'margin-bottom: 15px; padding: 10px;',
         ),
-    ) ); 
-
-    //___Theme info___//
-    $wp_customize->add_section(
-        'amadeus_extensions',
-        array(
-            'title' => __('Theme extensions', 'amadeus'),
-            'priority' => 99,
-            'description' => __('Extensions for Amadeus can be found ', 'amadeus') . '<a target="_blank" href="http://flyfreemedia.com/amadeus/extensions">' . __('here', 'amadeus') . '</a>',
-        )
-    );
-    $wp_customize->add_setting('amadeus_theme_ext', array(
-            'type'              => 'info_control',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
-        )
-    );
-    $wp_customize->add_control( new Amadeus_Theme_Info( $wp_customize, 'extensions', array(
-        'section' => 'amadeus_extensions',
-        'settings' => 'amadeus_theme_ext',
-        'priority' => 10
-        ) )
-    );  
+    ) );
 
 }
 add_action( 'customize_register', 'amadeus_customize_register' );
@@ -1053,3 +1031,14 @@ function amadeus_customize_preview_js() {
 	wp_enqueue_script( 'amadeus_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'amadeus_customize_preview_js' );
+
+function amadeus_registers() {
+	wp_enqueue_script( 'amadeus_customizer_script', get_template_directory_uri() . '/js/amadeus_customizer.js', array("jquery"), '20120206', true  );
+
+	wp_localize_script( 'amadeus_customizer_script', 'amadeusCustomizerObject', array(
+		'github'				=> __('GitHub','amadeus'),
+		'review'				=> __('Leave a Review', 'amadeus'),
+		'documentation'	=> __('Documentation', 'amadeus')
+		) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'amadeus_registers' );
