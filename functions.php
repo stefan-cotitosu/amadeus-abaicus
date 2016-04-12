@@ -182,6 +182,8 @@ function amadeus_customizer_styles() {
 
 	wp_enqueue_style( 'amadeus-customizer-styles', get_template_directory_uri() . '/css/customizer.css' );
 
+	wp_enqueue_style( 'amadeus-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );
+
 }
 add_action( 'customize_controls_print_styles', 'amadeus_customizer_styles' );
 
