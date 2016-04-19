@@ -12,6 +12,7 @@
   content: '\f10c';
   margin-right: 5px;
   color: #70787E;
+  float: left;
 }
 #accordion-section-amadeus_general h3:before {
   content: '\f013';
