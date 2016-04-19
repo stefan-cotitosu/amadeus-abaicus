@@ -13,13 +13,13 @@ jQuery(document).ready(function() {
 
     if( jQuery( ".amadeus-upsells" ).length ) {
 
-  		jQuery('.amadeus-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="http://flyfreemedia.com/documentation/amadeus/" class="button" target="_blank">{documentation}</a>'.replace('{documentation}', amadeusCustomizerObject.documentation));
-  		jQuery('.amadeus-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="https://github.com/Codeinwp/amadeus" class="button" target="_blank">{github}</a>'.replace('{github}', amadeusCustomizerObject.github));
-  		jQuery('.amadeus-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="https://wordpress.org/support/view/theme-reviews/amadeus#postform" class="button" target="_blank">{review}</a>'.replace('{review}', amadeusCustomizerObject.review));
+  		jQuery('.amadeus-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="http://docs.themeisle.com/article/270-amadeus-documentation" class="button" target="_blank">{documentation}</a>'.replace('{documentation}', amadeusCustomizerObject.documentation));
 
   	}
 
 	if ( !jQuery( ".amadeus-upsells" ).length ) {
 		jQuery('#customize-theme-controls > ul').prepend('</li>');
 	}
+	
+	jQuery('.preview-notice').append('<a class="amadeus-upgrade-to-pro-button" href="http://themeisle.com/themes/amadeus-pro/" class="button" target="_blank">{pro}</a>'.replace('{pro}',amadeusCustomizerObject.pro));
 });

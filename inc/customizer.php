@@ -1036,9 +1036,37 @@ function amadeus_registers() {
 	wp_enqueue_script( 'amadeus_customizer_script', get_template_directory_uri() . '/js/amadeus_customizer.js', array("jquery"), '20120206', true  );
 
 	wp_localize_script( 'amadeus_customizer_script', 'amadeusCustomizerObject', array(
-		'github'				=> __('GitHub','amadeus'),
-		'review'				=> __('Leave a Review', 'amadeus'),
-		'documentation'	=> __('Documentation', 'amadeus')
-		) );
+		'documentation'	=> __('Documentation', 'amadeus'),
+		'pro'	=> __('View PRO version', 'amadeus')
+	) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'amadeus_registers' );
+
+/* ajax callback for dismissable Asking for reviews */
+add_action( 'wp_ajax_amadeus_dismiss_asking_for_reviews','amadeus_dismiss_asking_for_reviews_callback' );
+add_action( 'wp_ajax_nopriv_amadeus_dismiss_asking_for_reviews','amadeus_dismiss_asking_for_reviews_callback' );
+/**
+ * Dismiss asking for reviews
+ */
+function amadeus_dismiss_asking_for_reviews_callback() {
+	
+	if( !empty($_POST['ask']) ) {
+		set_theme_mod('amadeus_ask_for_review',esc_attr($_POST['ask']));
+	}
+	die();
+}
+add_action( 'customize_controls_enqueue_scripts', 'amadeus_asking_for_reviews_script' );
+function amadeus_asking_for_reviews_script() {
+	
+	$amadeus_review = 'yes';
+	
+	$amadeus_ask_for_review = get_theme_mod('amadeus_ask_for_review');
+	if( !empty($amadeus_ask_for_review) ) {
+		$amadeus_review = $amadeus_ask_for_review;
+	}
+	wp_enqueue_script( 'amadeus-asking-for-reviews-js', get_template_directory_uri() . '/js/amadeus_reviews.js', array('jquery') );
+	wp_localize_script( 'amadeus-asking-for-reviews-js', 'amadeusAskingForReviewsObject', array(
+		'ask' => $amadeus_review,
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+	) );
+}

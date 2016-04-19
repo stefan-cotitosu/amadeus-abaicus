@@ -12,6 +12,7 @@
   content: '\f10c';
   margin-right: 5px;
   color: #70787E;
+  float: left;
 }
 #accordion-section-amadeus_general h3:before {
   content: '\f013';
@@ -51,4 +52,27 @@
 }
 #accordion-section-amadeus_fonts h3:before {
   content: '\f031';
+}
+.amadeus-upgrade-to-pro-button {
+	padding: 3px 6px !important;
+	line-height: 1.5 !important;
+	font-size: 9px !important;
+	color: #ffffff !important;
+	background-color: #EA6F60;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.customizer-review-link {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.customizer-review-link p {
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.customizer-review-link span {
+	font-size: 12px;
+	width: 12px;
 }
