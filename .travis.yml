@@ -1,23 +1,27 @@
 # Travis CI configuration file.
 # @link https://travis-ci.org/
 
-# For use with the Twenty Sixteen WordPress theme
-# @link https://github.com/WordPress/twentysixteen/
 
 # Declare project language and PHP versions to test against.
 # @link http://about.travis-ci.org/docs/user/languages/php/
 language: php
 
-# Declare versions of PHP to use. Use one decimal max.
-php:
-    - "hhvm"
-    - "7.0"
-    - "5.6"
-    - "5.5"
-    - "5.4"
-    - "5.3"
-    # Current $required_php_version for WordPress: 5.2.4
-    - "5.2"
+matrix:
+    fast_finish: true
+
+    include:
+        # Current $required_php_version for WordPress: 5.2.4
+        # aliased to 5.2.17
+        - php: '5.2'
+        # aliased to a recent 5.6.x version
+        - php: '5.6'
+        # aliased to a recent 7.x version
+        - php: '7.0'
+        # aliased to a recent hhvm version
+        - php: 'hhvm'
+
+    allow_failures:
+        - php: 'hhvm'
 
 # Ditch sudo and use containers.
 # @link http://docs.travis-ci.com/user/migrating-from-legacy/#Why-migrate-to-container-based-infrastructure%3F
@@ -40,7 +44,7 @@ before_script:
     - mkdir -p $WP_DEVELOP_DIR
     # Use the Git mirror of WordPress.
     - git clone --depth=1 --branch="$WP_VERSION" git://develop.git.wordpress.org/ $WP_DEVELOP_DIR
-    # Set up Twenty Sixteen theme information.
+    # Set up theme information.
     - theme_slug=$(basename $(pwd))
     - theme_dir=$WP_DEVELOP_DIR/src/wp-content/themes/$theme_slug
     - cd ..
@@ -69,7 +73,7 @@ before_script:
     - phpenv rehash
     # Install JSCS: JavaScript Code Style checker
     # @link http://jscs.info/
-    - npm install -g jscs
+    #- npm install -g jscs
     # Install JSHint, a JavaScript Code Quality Tool
     # @link http://jshint.com/docs/
     - npm install -g jshint
@@ -83,8 +87,6 @@ script:
     - find . \( -name '*.php' \) -exec php -lf {} \;
     # Run the theme through JSHint
     - jshint .
-    # Run the theme through JavaScript Code Style checker
-    - jscs .
     # WordPress Coding Standards
     # @link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards
     # @link http://pear.php.net/package/PHP_CodeSniffer/
@@ -94,4 +96,4 @@ script:
     # -n flag: Do not print warnings (shortcut for --warning-severity=0)
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
-    - $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
+    #- $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
