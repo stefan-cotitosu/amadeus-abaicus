@@ -37,7 +37,7 @@ function amadeus_custom_styles($custom) {
 	//Primary color
 	$primary_color = get_theme_mod( 'primary_color', '#618EBA' );
 	if ( $primary_color != '#618EBA' ) {
-		$custom .= "a, a:hover, .main-navigation a:hover, .nav-next a:hover, .nav-previous a:hover, .social-navigation li a:hover { color:" . esc_attr($primary_color) . "}"."\n";
+		$custom .= "a, a:hover, .main-navigation a:hover, .nav-next a:hover, .nav-previous a:hover, .social-navigation li a:hover { color:" . esc_attr($primary_color) . " !important;}"."\n";
 		$custom .= "button, .button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"], .entry-thumb-inner { background-color:" . esc_attr($primary_color) . "}"."\n";
 	}
 	//Body
@@ -57,20 +57,20 @@ function amadeus_custom_styles($custom) {
 	$custom .= ".main-navigation { background-color:" . esc_attr($menu_bg) . "}"."\n";
 	//Menu items
 	$menu_color = get_theme_mod( 'menu_color', '#1c1c1c' );
-	$custom .= ".main-navigation a { color:" . esc_attr($menu_color) . "}"."\n";
+	$custom .= ".main-navigation a { color:" . esc_attr($menu_color) . " !important;}"."\n";
 
 	//Site title
 	$site_title = get_theme_mod( 'site_title_color', '#1c1c1c' );
-	$custom .= ".site-title a, .site-title a:hover { color:" . esc_attr($site_title) . "}"."\n";
+	$custom .= ".site-title a, .site-title a:hover { color:" . esc_attr($site_title) . " !important;}"."\n";
 	//Site desc
 	$site_desc = get_theme_mod( 'site_desc_color', '#767676' );
 	$custom .= ".site-description { color:" . esc_attr($site_desc) . "}"."\n";
 	//Entry titles
 	$entry_titles = get_theme_mod( 'entry_titles', '#1c1c1c' );
-	$custom .= ".entry-title, .entry-title a { color:" . esc_attr($entry_titles) . "}"."\n";	
+	$custom .= ".entry-title, .entry-title a { color:" . esc_attr($entry_titles) . " !important;}"."\n";
 	//Entry meta
 	$entry_meta = get_theme_mod( 'entry_meta', '#9d9d9d' );
-	$custom .= ".entry-meta, .entry-meta a, .entry-footer, .entry-footer a { color:" . esc_attr($entry_meta) . "}"."\n";	
+	$custom .= ".entry-meta, .entry-meta a, .entry-footer, .entry-footer a { color:" . esc_attr($entry_meta) . " !important;}"."\n";
 	//Footer
 	$footer_bg = get_theme_mod( 'footer_bg', '#fff' );
 	$custom .= ".site-footer, .footer-widget-area { background-color:" . esc_attr($footer_bg) . "}"."\n";	
