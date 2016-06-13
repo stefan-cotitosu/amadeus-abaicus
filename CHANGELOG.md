@@ -1,4 +1,9 @@
 
+### 1.08 - 13/06/2016
+**Changes:** 
+- Fix issue with custom colors options
+- Added Travis
+
 
 ### 1.06 - 19/04/2016
 
