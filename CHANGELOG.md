@@ -1,4 +1,11 @@
 
+### 1.07 - 13/06/2016
+**Changes:** 
+- Added Travis
+- Small Fix for child themes - add a class to the article tag when featured images are hidden
+- Fixed style for ordered lists in the comments area
+- Fixed color options issues
+
 
 ### 1.06 - 19/04/2016
 
