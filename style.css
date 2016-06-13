@@ -804,6 +804,10 @@ textarea {
 .comments-area ol {
 	padding: 0;
 }
+.comments-area .comment-content ol {
+	list-style: decimal;
+	padding-left: 35px;
+}
 .comments-area .children {
 	padding-left: 20px;
 }
