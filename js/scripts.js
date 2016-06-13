@@ -48,12 +48,12 @@ jQuery(function($) {
 
 //Parallax
 jQuery(function($) {
-	$(".header-image").parallax("50%", 0.3);
+	$('.header-image').parallax('50%', 0.3);
 });
 
 //Fit Vids
 jQuery(function($) {
-    $("body").fitVids();  
+    $('body').fitVids();
 });
 
 //Mobile menu

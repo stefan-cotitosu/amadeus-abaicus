@@ -47,7 +47,7 @@
 	//Menu color
 	wp.customize('menu_color',function( value ) {
 		value.bind( function( newval ) {
-			$('.main-navigation a').css('color', newval );
+			$('.main-navigation a').attr('style', 'color:' + newval + '!important;' );
 			$('.main-navigation ul ul a').css('color', '#fff' );
 		} );
 	});
@@ -56,7 +56,8 @@
 	//Site title
 	wp.customize('site_title_color',function( value ) {
 		value.bind( function( newval ) {
-			$('.site-title a').css('color', newval );
+			$('.site-title a').attr('style', 'color:' + newval + '!important;' );
+
 		} );
 	});
 	//Site desc
@@ -74,13 +75,13 @@
 	// Entry titles
 	wp.customize('entry_titles',function( value ) {
 		value.bind( function( newval ) {
-			$('.entry-title, .entry-title a').css('color', newval );
+			$('.entry-title, .entry-title a').attr('style', 'color:' + newval + '!important;' );
 		} );
 	});
 	// Entry meta
 	wp.customize('entry_meta',function( value ) {
 		value.bind( function( newval ) {
-			$('.entry-meta, .entry-meta a, .entry-footer, .entry-footer a').css('color', newval );
+			$('.entry-meta, .entry-meta a, .entry-footer, .entry-footer a').attr('style', 'color:' + newval + '!important;' );
 		} );
 	});	
 	// Footer bg
