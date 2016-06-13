@@ -317,3 +317,17 @@ require get_template_directory() . '/inc/banner.php';
  * Styles
  */
 require get_template_directory() . '/inc/styles.php';
+
+function amadeus_post_class( $classes ) {
+	global $post;
+
+	$amadeus_index_feat_image = get_theme_mod( 'index_feat_image' );
+	$amadeus_post_feat_image = get_theme_mod( 'post_feat_image' );
+
+	if( ( is_single() && !empty($amadeus_post_feat_image) && ($amadeus_post_feat_image == 1) ) || ( is_home() && !empty($amadeus_index_feat_image) && ($amadeus_index_feat_image == 1) ) ) {
+		$classes[] = 'amadeus-image-hidden';
+	}
+
+	return $classes;
+}
+add_filter( 'post_class', 'amadeus_post_class' );
