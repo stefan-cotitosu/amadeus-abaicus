@@ -47,26 +47,16 @@
 		        <?php
 
 		            /* Only logo */
-		            if ( ( get_theme_mod('site_logo') || ( function_exists( 'the_custom_logo' ) && function_exists( 'has_custom_logo' ) && has_custom_logo() ) ) && ( get_theme_mod('logo_style', 'hide-title') == 'hide-title' ) ) {
+		            if ( function_exists( 'the_custom_logo' ) && function_exists( 'has_custom_logo' ) && has_custom_logo() && ( get_theme_mod('logo_style', 'hide-title') == 'hide-title' ) ) {
 
-			            if ( function_exists( 'the_custom_logo' ) && function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
-				            the_custom_logo();
-			            } elseif ( get_theme_mod( 'site_logo' ) ) {
-				            ?>
-				            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"><img class="site-logo" src="<?php echo esc_url( get_theme_mod( 'site_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"/></a>
-				            <?php
-			            }
+			            the_custom_logo();
+
 		            }
 		            /* Logo + site title and site description */
-		            elseif ( get_theme_mod('logo_style', 'hide-title') == 'show-title' ) {
+		            elseif ( function_exists( 'the_custom_logo' ) && function_exists( 'has_custom_logo' ) && has_custom_logo() && ( get_theme_mod('logo_style', 'hide-title') == 'show-title' ) ) {
 
-			            if ( function_exists( 'the_custom_logo' ) && function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
-				            the_custom_logo();
-			            } elseif ( get_theme_mod( 'site_logo' ) ) {
-				            ?>
-				            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"><img class="site-logo show-title" src="<?php echo esc_url( get_theme_mod( 'site_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"/></a>
-				            <?php
-			            }
+			            the_custom_logo();
+			            
 			            ?>
 
 			            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
