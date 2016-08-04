@@ -81,15 +81,6 @@ function amadeus_setup() {
 	* Add custom logo.
 	*/
 	add_theme_support( 'custom-logo' );
-
-	/* Add default logo if the old logo is set */
-	add_filter('get_custom_logo',function($html) {
-		$site_logo = get_theme_mod('site_logo');
-		if( empty($html) && !empty( $site_logo ) ) {
-			$html = '<a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr(get_bloginfo('name')).'"><img class="site-logo" src="'.esc_url($site_logo).'" alt="'.esc_attr(get_bloginfo('name')).'" /></a>';
-		}
-		return $html;
-	});
 }
 endif; // amadeus_setup
 add_action( 'after_setup_theme', 'amadeus_setup' );
