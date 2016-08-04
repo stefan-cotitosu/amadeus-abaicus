@@ -1,4 +1,10 @@
 
+### 1.10 - 04/08/2016
+**Changes:** 
+- Fixed issue with fonts options in customize not visible in Firefox
+- Added support for custom logo
+- Fix typo
+
 ### 1.09 - 20/06/2016
 **Changes:** 
 - Fixed issue with menu item drop down color
