@@ -76,11 +76,6 @@ function amadeus_setup() {
 		'default-color' => 'f7f3f0',
 		'default-image' => '',
 	) ) );
-
-	/**
-	* Add custom logo.
-	*/
-	add_theme_support( 'custom-logo' );
 }
 endif; // amadeus_setup
 add_action( 'after_setup_theme', 'amadeus_setup' );
