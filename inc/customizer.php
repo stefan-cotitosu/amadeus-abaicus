@@ -60,27 +60,33 @@ function amadeus_customize_register( $wp_customize ) {
         'title'          => __('Header area', 'amadeus'),
     ) );
     //Logo Upload
-    $wp_customize->add_setting(
-        'site_logo',
-        array(
-            'default-image' => '',
-            'sanitize_callback' => 'esc_url_raw',
-
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Image_Control(
-            $wp_customize,
+    $custom_logo = $wp_customize->get_control( 'custom_logo' );
+    if( ! empty( $custom_logo ) ) {
+        $wp_customize->get_control( 'custom_logo' )->section = 'title_tagline' ;
+        $wp_customize->get_control( 'custom_logo' )->priority = 11;
+    } else {
+        $wp_customize->add_setting(
             'site_logo',
             array(
-               'label'          => __( 'Upload your logo', 'amadeus' ),
-               'type'           => 'image',
-               'section'        => 'title_tagline',
-               'settings'       => 'site_logo',
-               'priority'       => 11,
+                'default-image'     => '',
+                'sanitize_callback' => 'esc_url_raw',
+
             )
-        )
-    );
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+                'site_logo',
+                array(
+                    'label'    => __( 'Upload your logo', 'amadeus' ),
+                    'type'     => 'image',
+                    'section'  => 'title_tagline',
+                    'settings' => 'site_logo',
+                    'priority' => 11,
+                )
+            )
+        );
+    }
     //Logo size
     $wp_customize->add_setting(
         'logo_size',
@@ -327,7 +333,7 @@ function amadeus_customize_register( $wp_customize ) {
         'type'        => 'number',
         'priority'    => 10,
         'section'     => 'blog_options',
-        'label'       => __('Excerpt lenght', 'amadeus'),
+        'label'       => __('Excerpt length', 'amadeus'),
         'description' => __('Choose your excerpt length. Default: 55 words', 'amadeus'),
         'input_attrs' => array(
             'min'   => 0,
@@ -793,8 +799,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 90,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
     // Site description
@@ -814,8 +819,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 50,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
     //H1 size
@@ -835,8 +839,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
     //H2 size
@@ -856,8 +859,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
     //H3 size
@@ -877,8 +879,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
     //H4 size
@@ -898,8 +899,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
     //H5 size
@@ -919,8 +919,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
     //H6 size
@@ -940,8 +939,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
     //Body
@@ -961,8 +959,7 @@ function amadeus_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 24,
-            'step'  => 1,
-            'style' => 'margin-bottom: 15px; padding: 10px;',
+            'step'  => 1
         ),
     ) );
 

@@ -76,9 +76,36 @@ function amadeus_setup() {
 		'default-color' => 'f7f3f0',
 		'default-image' => '',
 	) ) );
+
+	/* Add custom logo support */
+	add_theme_support( 'custom-logo' );
+
+	/* filter custom logo with old logo value */
+	if ( ! get_option( 'amadeus_old_logo_flag' ) ) {
+
+		add_filter( 'get_custom_logo', function ( $html ) {
+
+			$site_logo = get_theme_mod( 'site_logo' );
+
+			if( !empty($site_logo) ) {
+				$html = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '"><img class="site-logo" src="' . esc_url( $site_logo ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" /></a>';
+			}
+
+			return $html;
+		} );
+	}
 }
 endif; // amadeus_setup
 add_action( 'after_setup_theme', 'amadeus_setup' );
+
+/* Add a flag for backwards logo compatibility */
+add_action( 'customize_save_after', amadeus_add_flag_for_old_logo );
+
+function amadeus_add_flag_for_old_logo() {
+	if ( ! get_option( 'amadeus_old_logo_flag' ) ) {
+		add_option( 'amadeus_old_logo_flag', true );
+	}
+}
 
 /**
  * Register widget area.
