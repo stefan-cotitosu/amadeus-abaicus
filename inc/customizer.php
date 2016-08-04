@@ -333,7 +333,7 @@ function amadeus_customize_register( $wp_customize ) {
         'type'        => 'number',
         'priority'    => 10,
         'section'     => 'blog_options',
-        'label'       => __('Excerpt lenght', 'amadeus'),
+        'label'       => __('Excerpt length', 'amadeus'),
         'description' => __('Choose your excerpt length. Default: 55 words', 'amadeus'),
         'input_attrs' => array(
             'min'   => 0,
