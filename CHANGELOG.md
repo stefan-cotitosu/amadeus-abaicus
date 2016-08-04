@@ -1,4 +1,8 @@
 
+### 1.11 - 04/08/2016
+**Changes:** 
+- Fix notice
+
 ### 1.10 - 04/08/2016
 **Changes:** 
 - Fixed issue with fonts options in customize not visible in Firefox
