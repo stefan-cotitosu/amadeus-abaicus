@@ -1,4 +1,8 @@
 
+### 1.12 - 04/08/2016
+**Changes:** 
+- Fix issue with fields in Firefox
+
 ### 1.11 - 04/08/2016
 **Changes:** 
 - Fix notice
