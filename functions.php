@@ -99,7 +99,7 @@ endif; // amadeus_setup
 add_action( 'after_setup_theme', 'amadeus_setup' );
 
 /* Add a flag for backwards logo compatibility */
-add_action( 'customize_save_after', amadeus_add_flag_for_old_logo );
+add_action( 'customize_save_after', 'amadeus_add_flag_for_old_logo' );
 
 function amadeus_add_flag_for_old_logo() {
 	if ( ! get_option( 'amadeus_old_logo_flag' ) ) {
