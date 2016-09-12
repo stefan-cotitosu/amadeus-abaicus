@@ -26,6 +26,7 @@ jQuery(document).ready(function() {
 
 	//Locked sections
 	jQuery('#accordion-section-amadeus_extra_options').click(function() {
+		jQuery('.wp-full-overlay').removeClass('section-open');
 		jQuery('accordion-section-amadeus_extra_options').removeClass('open');
 		window.location.href = "http://themeisle.com/themes/amadeus-pro/";
 	});
