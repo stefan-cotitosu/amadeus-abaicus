@@ -7,6 +7,11 @@
 
 
 function amadeus_customize_register( $wp_customize ) {
+    class Amadeus_Theme_Support extends WP_Customize_Control {
+        public function render_content() {
+        }
+    }
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -473,6 +478,17 @@ function amadeus_customize_register( $wp_customize ) {
             )
         )
     );
+    //Extra options
+    $wp_customize->add_section( 'amadeus_extra_options', array(
+        'title'	=> 'Extra options',
+        'priority' => 29
+    ));
+    $wp_customize->add_setting( 'amadeus_extra_options', array(
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control( new Amadeus_Theme_Support( $wp_customize, 'amadeus_extra_options', array(
+        'section' => 'amadeus_extra_options',
+    )));
     //Social background
     $wp_customize->add_setting(
         'social_bg',

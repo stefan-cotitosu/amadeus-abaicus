@@ -76,3 +76,12 @@
 	font-size: 12px;
 	width: 12px;
 }
+
+#accordion-section-amadeus_extra_options .accordion-section-title {
+    background-image:url(../images/gray-lines.png);
+    background-repeat:repeat;
+}
+
+#accordion-section-amadeus_extra_options .accordion-section-title:after {
+    content: "\f160";
+}
