@@ -23,4 +23,12 @@ jQuery(document).ready(function() {
 	}
 	
 	jQuery('.preview-notice').append('<a class="amadeus-upgrade-to-pro-button" href="http://themeisle.com/themes/amadeus-pro/" class="button" target="_blank">{pro}</a>'.replace('{pro}',amadeusCustomizerObject.pro));
+
+	//Locked sections
+	jQuery('#accordion-section-amadeus_extra_options').click(function() {
+		jQuery('.wp-full-overlay').removeClass('section-open');
+		jQuery('accordion-section-amadeus_extra_options').removeClass('open');
+		window.location.href = "http://themeisle.com/themes/amadeus-pro/";
+	});
+
 });

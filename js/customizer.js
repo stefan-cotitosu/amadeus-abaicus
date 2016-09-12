@@ -21,6 +21,7 @@
 	wp.customize('logo_size',function( value ) {
 		value.bind( function( newval ) {
 			$('.site-logo').css('max-width', newval + 'px' );
+			$('.custom-logo').css('max-width', newval + 'px' );
 		} );
 	});
 
