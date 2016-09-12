@@ -1,4 +1,9 @@
 
+### 1.13 - 12/09/2016
+**Changes:** 
+- Added upsell in customize
+- Fixed issues with custom logo support
+
 ### 1.12 - 04/08/2016
 **Changes:** 
 - Fix issue with fields in Firefox
