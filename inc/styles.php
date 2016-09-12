@@ -22,6 +22,7 @@ function amadeus_custom_styles($custom) {
 	//Logo size
 	$logo_size = get_theme_mod( 'logo_size', '200' );
 	$custom .= ".site-logo { max-width:" . intval($logo_size) . "px; }"."\n";
+	$custom .= ".custom-logo { max-width:" . intval($logo_size) . "px; }"."\n";
 
 	//Hide sidebar
 	$hide_sidebar_index = get_theme_mod( 'hide_sidebar_index');
