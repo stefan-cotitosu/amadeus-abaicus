@@ -53,35 +53,11 @@
 #accordion-section-amadeus_fonts h3:before {
   content: '\f031';
 }
-.amadeus-upgrade-to-pro-button {
-	padding: 3px 6px !important;
-	line-height: 1.5 !important;
-	font-size: 9px !important;
-	color: #ffffff !important;
-	background-color: #EA6F60;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-}
-.customizer-review-link {
-	padding-top: 10px;
-	text-align: center;
+
+.amadeus-theme-info {
+    text-align: center;
 }
 
-.customizer-review-link p {
-	font-size: 12px;
-	margin-bottom: 0;
-}
-
-.customizer-review-link span {
-	font-size: 12px;
-	width: 12px;
-}
-
-#accordion-section-amadeus_extra_options .accordion-section-title {
-    background-image:url(../images/gray-lines.png);
-    background-repeat:repeat;
-}
-
-#accordion-section-amadeus_extra_options .accordion-section-title:after {
-    content: "\f160";
+.amadeus-theme-info hr {
+    margin: 10px auto;
 }
