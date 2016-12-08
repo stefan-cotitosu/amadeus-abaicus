@@ -1,4 +1,8 @@
 
+### 2.0.0 - 08/12/2016
+**Changes:** 
+- Update style.css
+
 ### 1.2.0 - 08/12/2016
 **Changes:** 
 - Fixed issue with layout in Customize with WordPress 4.7
