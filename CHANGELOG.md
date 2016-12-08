@@ -1,4 +1,8 @@
 
+### 1.2.0 - 08/12/2016
+**Changes:** 
+- Fixed issue with layout in Customize with WordPress 4.7
+
 ### 1.13 - 12/09/2016
 **Changes:** 
 - Added upsell in customize
