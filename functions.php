@@ -330,6 +330,11 @@ require get_template_directory() . '/inc/banner.php';
  */
 require get_template_directory() . '/inc/styles.php';
 
+/**
+ *  Customizer info
+ */
+require_once get_template_directory() . '/inc/customizer-info/class/class-singleton-customizer-info-section.php';
+
 function amadeus_post_class( $classes ) {
 	global $post;
 

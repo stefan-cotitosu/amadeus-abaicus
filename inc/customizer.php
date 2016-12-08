@@ -7,10 +7,6 @@
 
 
 function amadeus_customize_register( $wp_customize ) {
-    class Amadeus_Theme_Support extends WP_Customize_Control {
-        public function render_content() {
-        }
-    }
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -22,11 +18,20 @@ function amadeus_customize_register( $wp_customize ) {
     $wp_customize->remove_control( 'header_textcolor' );
     $wp_customize->remove_control( 'display_header_text' );
 
-    class Amadeus_Theme_Info extends WP_Customize_Control {
-        public $type = 'info';
-        public function render_content() {
-        }
-    }
+	require_once( 'class/amadeus-info.php' );
+	$wp_customize->add_section('amadeus_theme_info', array(
+		'title' => __( 'Theme info', 'amadeus' ),
+		'priority' => 0,
+	) );
+	$wp_customize->add_setting('amadeus_theme_info', array(
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'amadeus_sanitize_text',
+	) );
+	$wp_customize->add_control( new Amadeus_Info( $wp_customize, 'amadeus_theme_info', array(
+		'section' => 'amadeus_theme_info',
+		'priority' => 10,
+	) ) );
+
 
     //___General___//
     $wp_customize->add_section(
@@ -478,17 +483,7 @@ function amadeus_customize_register( $wp_customize ) {
             )
         )
     );
-    //Extra options
-    $wp_customize->add_section( 'amadeus_extra_options', array(
-        'title'	=> 'Extra options',
-        'priority' => 29
-    ));
-    $wp_customize->add_setting( 'amadeus_extra_options', array(
-        'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control( new Amadeus_Theme_Support( $wp_customize, 'amadeus_extra_options', array(
-        'section' => 'amadeus_extra_options',
-    )));
+
     //Social background
     $wp_customize->add_setting(
         'social_bg',
@@ -1039,42 +1034,3 @@ function amadeus_customize_preview_js() {
 	wp_enqueue_script( 'amadeus_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'amadeus_customize_preview_js' );
-
-function amadeus_registers() {
-	wp_enqueue_script( 'amadeus_customizer_script', get_template_directory_uri() . '/js/amadeus_customizer.js', array("jquery"), '20120206', true  );
-
-	wp_localize_script( 'amadeus_customizer_script', 'amadeusCustomizerObject', array(
-		'documentation'	=> __('Documentation', 'amadeus'),
-		'pro'	=> __('View PRO version', 'amadeus')
-	) );
-}
-add_action( 'customize_controls_enqueue_scripts', 'amadeus_registers' );
-
-/* ajax callback for dismissable Asking for reviews */
-add_action( 'wp_ajax_amadeus_dismiss_asking_for_reviews','amadeus_dismiss_asking_for_reviews_callback' );
-add_action( 'wp_ajax_nopriv_amadeus_dismiss_asking_for_reviews','amadeus_dismiss_asking_for_reviews_callback' );
-/**
- * Dismiss asking for reviews
- */
-function amadeus_dismiss_asking_for_reviews_callback() {
-	
-	if( !empty($_POST['ask']) ) {
-		set_theme_mod('amadeus_ask_for_review',esc_attr($_POST['ask']));
-	}
-	die();
-}
-add_action( 'customize_controls_enqueue_scripts', 'amadeus_asking_for_reviews_script' );
-function amadeus_asking_for_reviews_script() {
-	
-	$amadeus_review = 'yes';
-	
-	$amadeus_ask_for_review = get_theme_mod('amadeus_ask_for_review');
-	if( !empty($amadeus_ask_for_review) ) {
-		$amadeus_review = $amadeus_ask_for_review;
-	}
-	wp_enqueue_script( 'amadeus-asking-for-reviews-js', get_template_directory_uri() . '/js/amadeus_reviews.js', array('jquery') );
-	wp_localize_script( 'amadeus-asking-for-reviews-js', 'amadeusAskingForReviewsObject', array(
-		'ask' => $amadeus_review,
-		'ajaxurl' => admin_url( 'admin-ajax.php' ),
-	) );
-}
