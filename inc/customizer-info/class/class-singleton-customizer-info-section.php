@@ -75,13 +75,11 @@ final class Customizer_Info_Singleton {
 		// Register custom section types.
 		$manager->register_section_type( 'Customizer_Info' );
 
-
 		$manager->add_section( new Customizer_Info( $manager, 'amadeus_view_pro', array(
 			'section_title' => __( 'View PRO version', 'amadeus' ),
 			'section_url' => 'https://themeisle.com/themes/amadeus-pro/#pricing-single',
 			'section_text' => __( 'Get it', 'amadeus' ),
 		) ) );
-
 
 	}
 
