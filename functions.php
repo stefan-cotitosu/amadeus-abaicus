@@ -217,8 +217,8 @@ function amadeus_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'      => 'WP Product Reviews',
-			'slug'      => 'wp-product-reviews',
+			'name'      => 'Nivo Slider Lite',
+			'slug'      => 'nivo-slider-lite',
 			'required'  => false,
 		),
 
