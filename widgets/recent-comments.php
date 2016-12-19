@@ -68,19 +68,19 @@ class Amadeus_Recent_Comments extends WP_Widget {
 			'post_status' => 'publish',
 		) ) );
 
-		if ( !empty( $instance['before_widget'] ) ) {
-			$output .= $instance['before_widget'];
+		if ( !empty( $args['before_widget'] ) ) {
+			$output .= $args['before_widget'];
 		}
 
 		if ( !empty( $title ) ) {
 
-			if ( !empty( $instance['before_title'] ) ) {
-				$output .= $instance['before_title'];
+			if ( !empty( $args['before_title'] ) ) {
+				$output .= $args['before_title'];
 			}
 			$output .= $title;
 
-			if ( !empty( $instance['after_title'] ) ) {
-				$output .= $instance['after_title'];
+			if ( !empty( $args['after_title'] ) ) {
+				$output .= $args['after_title'];
 			}
 		}
 
@@ -95,8 +95,8 @@ class Amadeus_Recent_Comments extends WP_Widget {
 			}
 		}
 		$output .= '</ul>';
-		if ( !empty( $instance['after_widget'] ) ) {
-			$output .= $instance['after_widget'];
+		if ( !empty( $args['after_widget'] ) ) {
+			$output .= $args['after_widget'];
 		}
 		echo $output;
 

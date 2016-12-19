@@ -122,19 +122,19 @@ class Amadeus_Recent_Posts extends WP_Widget {
 		) );
 
 		if ( $r->have_posts() ) :
-			if ( !empty( $instance['before_widget'] ) ) {
-				echo $instance['before_widget'];
+			if ( !empty( $args['before_widget'] ) ) {
+				echo $args['before_widget'];
 			}
 
 			if ( !empty( $title ) ) {
 
-				if ( !empty( $instance['before_title'] ) ) {
-					echo $instance['before_title'];
+				if ( !empty( $args['before_title'] ) ) {
+					echo $args['before_title'];
 				}
 				echo $title;
 
-				if ( !empty( $instance['after_title'] ) ) {
-					echo $instance['after_title'];
+				if ( !empty( $args['after_title'] ) ) {
+					echo $args['after_title'];
 				}
 			}
 			?>
@@ -163,8 +163,8 @@ class Amadeus_Recent_Posts extends WP_Widget {
 				<?php endwhile; ?>
 			</ul>
 			<?php
-			if ( !empty( $instance['after_widget'] ) ) {
-				echo $instance['after_widget'];
+			if ( !empty( $args['after_widget'] ) ) {
+				echo $args['after_widget'];
 			}
 
 			wp_reset_postdata();
