@@ -251,11 +251,18 @@ function amadeus_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'amadeus_sanitize_text',
 		)
 	);
+
+	$amadeus_nivo_shortcode_desc = __( 'Add the shortcode for the Nivo Slider plugin here','amadeus' );
+
+	if ( !class_exists( 'WordPress_Nivo_Slider_Lite' ) ) {
+		$amadeus_nivo_shortcode_desc = sprintf( __( 'Add the shortcode for the %s plugin here','amadeus' ), sprintf( '<a href="'.esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=nivo-slider-lite' ), 'install-plugin_nivo-slider-lite' ) ).'" >%s</a>', 'Nivo Slider' ) );
+	}
+
 	$wp_customize->add_control(
 		'metaslider_shortcode',
 		array(
 			'label' => __( 'Nivo Slider shortcode', 'amadeus' ),
-			'description'       => __( 'Add the shortcode for the Nivo Slider plugin here', 'amadeus' ),
+			'description'  => $amadeus_nivo_shortcode_desc,
 			'section' => 'amadeus_banner',
 			'type' => 'text',
 			'priority' => 18,
