@@ -25,7 +25,7 @@ function amadeus_banner() {
 	} elseif ( get_theme_mod( 'banner_type', 'image' ) == 'slider' ) {
 		$shortcode = get_theme_mod( 'metaslider_shortcode' );
 		echo '<div class="header-slider">';
-	    	echo do_shortcode( esc_attr( $shortcode ) );
+	    	echo do_shortcode( $shortcode );
 	    echo '</div>';
 	}
 }

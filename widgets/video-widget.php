@@ -107,16 +107,28 @@ class Amadeus_Video extends WP_Widget {
 
 		$url = isset( $instance['url'] ) ? esc_url( $instance['url'] ) : '';
 
-		echo $instance['before_widget'];
+		if ( !empty( $instance['before_widget'] ) ) {
+			echo $instance['before_widget'];
+		}
 
-		if ( $title ) {
-			echo $instance['$before_title'] . $title . $instance['after_title'];
+		if ( !empty( $title ) ) {
+
+			if ( !empty( $instance['before_title'] ) ) {
+				echo $instance['before_title'];
+			}
+			echo $title;
+
+			if ( !empty( $instance['after_title'] ) ) {
+				echo $instance['after_title'];
+			}
 		}
 
 		if ( ( $url ) ) {
 			echo wp_oembed_get( $url );
 		}
-		echo $instance['after_widget'];
+		if ( !empty( $instance['after_widget'] ) ) {
+			echo $instance['after_widget'];
+		}
 
 		if ( ! $this->is_preview() ) {
 			$cache[ $args['widget_id'] ] = ob_get_flush();

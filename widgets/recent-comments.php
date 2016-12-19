@@ -68,9 +68,20 @@ class Amadeus_Recent_Comments extends WP_Widget {
 			'post_status' => 'publish',
 		) ) );
 
-		$output .= $instance['before_widget'];
-		if ( $title ) {
-			$output .= $instance['before_title'] . $title . $instance['after_title'];
+		if ( !empty( $instance['before_widget'] ) ) {
+			$output .= $instance['before_widget'];
+		}
+
+		if ( !empty( $title ) ) {
+
+			if ( !empty( $instance['before_title'] ) ) {
+				$output .= $instance['before_title'];
+			}
+			$output .= $title;
+
+			if ( !empty( $instance['after_title'] ) ) {
+				$output .= $instance['after_title'];
+			}
 		}
 
 		$output .= '<ul class="list-group">';
@@ -84,8 +95,9 @@ class Amadeus_Recent_Comments extends WP_Widget {
 			}
 		}
 		$output .= '</ul>';
-		$output .= $instance['after_widget'];
-
+		if ( !empty( $instance['after_widget'] ) ) {
+			$output .= $instance['after_widget'];
+		}
 		echo $output;
 
 		if ( ! $this->is_preview() ) {

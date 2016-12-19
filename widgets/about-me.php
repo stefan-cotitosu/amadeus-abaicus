@@ -30,17 +30,31 @@ class Amadeus_About extends WP_Widget {
 		$title     = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		$image_url = isset( $instance['image_url'] ) ? esc_url( $instance['image_url'] ) : '';
 		$text      = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
-		echo $args['before_widget'];
 
-		if ( $image_url ) {
+		if ( !empty( $args['before_widget'] ) ) {
+			echo $args['before_widget'];
+		}
+
+		if ( !empty( $image_url ) ) {
 			echo '<div class="photo-wrapper"><img class="about-photo" src="' . $image_url . '"/></div>';
 		}
-		if ( $title ) {
-			echo $args['before_title'] . $title . $args['after_title'];
+		if ( !empty( $title ) ) {
+
+			if ( !empty( $args['before_title'] ) ) {
+				echo $args['before_title'];
+			}
+			echo $title;
+
+			if ( !empty( $args['after_title'] ) ) {
+				echo $args['after_title'];
+			}
 		} ?>
 		<div class="textwidget"><?php echo ! empty( $instance['filter'] ) ? wpautop( $text ) : $text; ?></div>
 		<?php
-		echo $args['after_widget'];
+
+		if ( !empty( $args['after_widget'] ) ) {
+			echo $args['after_widget'];
+		}
 	}
 
 	/**
