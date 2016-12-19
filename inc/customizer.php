@@ -220,7 +220,7 @@ function amadeus_customize_register( $wp_customize ) {
             'priority'      => 16,
             'choices'       => array(
                 'image'    => __( 'Header image', 'amadeus' ),
-                'slider'   => __( 'MetaSlider (requires the MetaSlider plugin)', 'amadeus' ),
+                'slider'   => __( 'Nivo Slider (requires the Nivo Slider plugin)', 'amadeus' ),
                 'nothing'  => __( 'Nothing', 'amadeus' ),
             ),
         )
@@ -253,8 +253,8 @@ function amadeus_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'metaslider_shortcode',
         array(
-            'label' => __( 'MetaSlider shortcode', 'amadeus' ),
-            'description'       => __( 'Add the shortcode for the MetaSlider plugin here', 'amadeus' ),
+            'label' => __( 'Nivo Slider shortcode', 'amadeus' ),
+            'description'       => __( 'Add the shortcode for the Nivo Slider plugin here', 'amadeus' ),
             'section' => 'amadeus_banner',
             'type' => 'text',
             'priority' => 18
@@ -1008,7 +1008,7 @@ function amadeus_sanitize_menu_position( $input ) {
 function amadeus_sanitize_banner( $input ) {
     $valid = array(
                 'image'    => __( 'Header image', 'amadeus' ),
-                'slider'   => __( 'MetaSlider (requires the MetaSlider plugin)', 'amadeus' ),
+                'slider'   => __( 'Nivo Slider (requires the Nivo Slider plugin)', 'amadeus' ),
                 'nothing'  => __( 'Nothing', 'amadeus' ),
             );
     if ( array_key_exists( $input, $valid ) ) {
