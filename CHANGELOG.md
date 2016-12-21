@@ -1,4 +1,10 @@
 
+### 2.0.1 - 21/12/2016
+**Changes:** 
+- Added grunt and fixed all the generated errors
+- Recommend Nivo Slider Lite
+- Compatibility with Nivo Slider Lite plugin
+
 ### 2.0.0 - 08/12/2016
 **Changes:** 
 - Update style.css
