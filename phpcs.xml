@@ -13,6 +13,7 @@
 
         <exclude name="WordPress.PHP.YodaConditions.NotYoda" />
         <exclude name="WordPress.Files.FileName.UnderscoresNotAllowed" />
+        <exclude name="WordPress.WP.I18n.NoEmptyStrings" />
     </rule>
     <rule ref="WordPress-Docs">
 
