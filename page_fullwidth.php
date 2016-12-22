@@ -30,7 +30,7 @@ get_header();
 		<?php endwhile; // end of the loop. ?>
 
 
-	q</main><!-- #main -->
+	</main><!-- #main -->
 </div><!-- #primary -->
 
 <?php get_footer(); ?>
