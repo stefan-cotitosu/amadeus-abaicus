@@ -1,4 +1,8 @@
 
+### 2.0.2 - 22/12/2016
+**Changes:** 
+- Fix typo in page_fullwidth.php
+
 ### 2.0.1 - 21/12/2016
 **Changes:** 
 - Added grunt and fixed all the generated errors
