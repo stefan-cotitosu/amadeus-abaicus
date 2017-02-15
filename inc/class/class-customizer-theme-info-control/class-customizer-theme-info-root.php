@@ -84,7 +84,7 @@ final class Amadeus_Customizer_Upsell {
 
 		// Header Panel Upsell.
 		$manager->add_section( new Amadeus_Customizer_Theme_Info_Section( $manager, 'amadeus-theme-info-section-header', array(
-		'panel'       => 'amadeus_header_panel',
+			'panel'       => 'amadeus_header_panel',
 			'priority'    => 500,
 			'options'     => array(
 				esc_html__( 'Slider', 'amadeus' ),

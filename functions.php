@@ -335,7 +335,7 @@ require get_template_directory() . '/inc/styles.php';
 /**
  *  Upsells
  */
-require_once ( trailingslashit( get_template_directory() ) . 'inc/class/class-customizer-theme-info-control/class-customizer-theme-info-root.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/class/class-customizer-theme-info-control/class-customizer-theme-info-root.php' );
 
 /**
  * Filter for post's classes.
