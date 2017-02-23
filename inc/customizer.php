@@ -979,8 +979,6 @@ function amadeus_customize_register( $wp_customize ) {
 		'section'     => 'amadeus_theme_info_main_section',
 		'priority'    => 100,
 		'options'     => array(
-			esc_html__( 'Jetpack Related Posts', 'amadeus' ),
-			esc_html__( 'Slider', 'amadeus' ),
 			esc_html__( 'Extra Widget Area', 'amadeus' ),
 			esc_html__( 'Alternative Layout', 'amadeus' ),
 			esc_html__( 'Extra Colors', 'amadeus' ),

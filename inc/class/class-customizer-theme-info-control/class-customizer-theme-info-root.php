@@ -81,20 +81,6 @@ final class Amadeus_Customizer_Upsell {
 			'label_url'    => esc_url( 'http://docs.themeisle.com/article/270-amadeus-documentation' ),
 			'label_text'   => __( 'Documentation', 'amadeus' ),
 		) ) );
-
-		// Header Panel Upsell.
-		$manager->add_section( new Amadeus_Customizer_Theme_Info_Section( $manager, 'amadeus-theme-info-section-header', array(
-			'panel'       => 'amadeus_header_panel',
-			'priority'    => 500,
-			'options'     => array(
-				esc_html__( 'Slider', 'amadeus' ),
-			),
-			'explained_features' => array(
-				esc_html__( 'Add a shortcode for a slider to replace the header image.', 'amadeus' ),
-			),
-			'button_url'  => esc_url( 'https://themeisle.com/themes/amadeus-pro/' ),
-			'button_text' => esc_html__( 'View PRO version', 'amadeus' ),
-		) ) );
 	}
 
 	/**
