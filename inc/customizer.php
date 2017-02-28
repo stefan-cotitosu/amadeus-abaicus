@@ -982,6 +982,7 @@ function amadeus_customize_register( $wp_customize ) {
 			esc_html__( 'Extra Widget Area', 'amadeus' ),
 			esc_html__( 'Alternative Layout', 'amadeus' ),
 			esc_html__( 'Extra Colors', 'amadeus' ),
+			esc_html__( 'Extra Typography Options', 'amadeus' ),
 			esc_html__( 'Footer Credits', 'amadeus' ),
 			esc_html__( 'Support', 'amadeus' ),
 		),
