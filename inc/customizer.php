@@ -22,35 +22,6 @@ function amadeus_customize_register( $wp_customize ) {
 	$wp_customize->remove_control( 'header_textcolor' );
 	$wp_customize->remove_control( 'display_header_text' );
 
-	// ___General___//
-	$wp_customize->add_section(
-		'amadeus_general',
-		array(
-			'title' => __( 'General', 'amadeus' ),
-			'priority' => 9,
-		)
-	);
-	// Favicon Upload
-	$wp_customize->add_setting(
-		'site_favicon',
-		array(
-			'default-image' => '',
-			'sanitize_callback' => 'esc_url_raw',
-		)
-	);
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
-			'site_favicon',
-			array(
-				'label'          => __( 'Upload your favicon', 'amadeus' ),
-				'type'           => 'image',
-				'section'        => 'amadeus_general',
-				'settings'       => 'site_favicon',
-				'priority' => 10,
-			)
-		)
-	);
 	// ___Header area___//
 	$wp_customize->add_panel( 'amadeus_header_panel', array(
 		'priority'       => 10,
