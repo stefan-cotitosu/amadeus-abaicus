@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amadeus 2.0.5\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/amadeus/issues\n"
-"POT-Creation-Date: 2017-07-17 13:20:56+00:00\n"
+"POT-Creation-Date: 2017-07-28 13:49:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -377,19 +377,19 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: comments.php:51 comments.php:73
+#: comments.php:50 comments.php:74
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:54 comments.php:76
+#: comments.php:53 comments.php:77
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:55 comments.php:77
+#: comments.php:54 comments.php:78
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:89
+#: comments.php:90
 msgid "Comments are closed."
 msgstr ""
 
@@ -397,70 +397,70 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:21
+#: content-none.php:22
 #. translators: Add new post link
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content-none.php:25
+#: content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: content-none.php:30
+#: content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:29 content.php:43
+#: content-page.php:19 content-single.php:30 content.php:48
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:25
+#: content-page.php:27
 msgid "Edit"
 msgstr ""
 
-#: content.php:34
+#: content.php:36
 #. translators: Title of the post
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: functions.php:54
+#: functions.php:55
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:55
+#: functions.php:56
 msgid "Social"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:121
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:132
 msgid "Footer left"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:142
 msgid "Footer center"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:152
 msgid "Footer right"
 msgstr ""
 
-#: functions.php:262
+#: functions.php:280
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: functions.php:264
+#: functions.php:282
 #. translators: WordPress
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: functions.php:268
+#: functions.php:286
 #. translators: 1 - WordPress link, 2 - Theme name
 msgid "Theme: %2$s by %1$s."
 msgstr ""
@@ -473,7 +473,7 @@ msgstr ""
 msgid "Amadeus"
 msgstr ""
 
-#: inc/class/class-customizer-theme-info-control/class-customizer-theme-info-root.php:82
+#: inc/class/class-customizer-theme-info-control/class-customizer-theme-info-root.php:84
 msgid "Documentation"
 msgstr ""
 
@@ -481,288 +481,288 @@ msgstr ""
 msgid "Site branding"
 msgstr ""
 
-#: inc/customizer.php:30
+#: inc/customizer.php:31
 msgid "Header area"
 msgstr ""
 
-#: inc/customizer.php:51
+#: inc/customizer.php:53
 msgid "Upload your logo"
 msgstr ""
 
-#: inc/customizer.php:73
+#: inc/customizer.php:76
 msgid "Logo size"
 msgstr ""
 
-#: inc/customizer.php:74
+#: inc/customizer.php:77
 msgid "Max-width for the logo. Default 200px"
 msgstr ""
 
-#: inc/customizer.php:93
+#: inc/customizer.php:97
 msgid "Logo style"
 msgstr ""
 
-#: inc/customizer.php:94
+#: inc/customizer.php:98
 msgid "This option applies only if you are using a logo"
 msgstr ""
 
-#: inc/customizer.php:98 inc/customizer.php:1024
+#: inc/customizer.php:102 inc/customizer.php:1074
 msgid "Only logo"
 msgstr ""
 
-#: inc/customizer.php:99 inc/customizer.php:1025
+#: inc/customizer.php:103 inc/customizer.php:1075
 msgid "Logo plus site title&amp;description"
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:120
 msgid "Site branding padding"
 msgstr ""
 
-#: inc/customizer.php:116
+#: inc/customizer.php:121
 msgid ""
 "Top&amp;bottom padding for the branding (logo, site title, description). "
 "Default: 75px"
 msgstr ""
 
-#: inc/customizer.php:128 inc/customizer.php:145
+#: inc/customizer.php:134 inc/customizer.php:151
 msgid "Menu position"
 msgstr ""
 
-#: inc/customizer.php:149 inc/customizer.php:1043
+#: inc/customizer.php:155 inc/customizer.php:1093
 msgid "Above site title/description"
 msgstr ""
 
-#: inc/customizer.php:150 inc/customizer.php:1044
+#: inc/customizer.php:156 inc/customizer.php:1094
 msgid "Below site title/description"
 msgstr ""
 
-#: inc/customizer.php:159 inc/customizer.php:176
+#: inc/customizer.php:165 inc/customizer.php:182
 msgid "Banner type"
 msgstr ""
 
-#: inc/customizer.php:180 inc/customizer.php:1062
+#: inc/customizer.php:186 inc/customizer.php:1112
 msgid "Header image"
 msgstr ""
 
-#: inc/customizer.php:181 inc/customizer.php:1063
+#: inc/customizer.php:187 inc/customizer.php:1113
 msgid "Nivo Slider (requires the Nivo Slider plugin)"
 msgstr ""
 
-#: inc/customizer.php:182 inc/customizer.php:1064
+#: inc/customizer.php:188 inc/customizer.php:1114
 msgid "Nothing"
 msgstr ""
 
-#: inc/customizer.php:198
+#: inc/customizer.php:204
 msgid "Show the banner only on the homepage?"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:218
 msgid "Add the shortcode for the Nivo Slider plugin here"
 msgstr ""
 
-#: inc/customizer.php:216
+#: inc/customizer.php:222
 #. translators: Install Nivo Slider Link
 msgid "Add the shortcode for the %s plugin here"
 msgstr ""
 
-#: inc/customizer.php:222
+#: inc/customizer.php:228
 msgid "Nivo Slider shortcode"
 msgstr ""
 
-#: inc/customizer.php:242
+#: inc/customizer.php:249
 msgid "Header image height"
 msgstr ""
 
-#: inc/customizer.php:261
+#: inc/customizer.php:270
 msgid "Header image height < 1024px"
 msgstr ""
 
-#: inc/customizer.php:262
+#: inc/customizer.php:271
 msgid "Set your header image height for screen widths smaller than 1024px"
 msgstr ""
 
-#: inc/customizer.php:281
+#: inc/customizer.php:291
 msgid "Hide the animated scroll arrow from the header image?"
 msgstr ""
 
-#: inc/customizer.php:291
+#: inc/customizer.php:301
 msgid "Blog options"
 msgstr ""
 
-#: inc/customizer.php:307
+#: inc/customizer.php:318
 msgid "Excerpt length"
 msgstr ""
 
-#: inc/customizer.php:308
+#: inc/customizer.php:319
 msgid "Choose your excerpt length. Default: 55 words"
 msgstr ""
 
-#: inc/customizer.php:327
+#: inc/customizer.php:339
 msgid "Hide date/author/archives on index?"
 msgstr ""
 
-#: inc/customizer.php:343
+#: inc/customizer.php:355
 msgid "Hide date/author/archives on single posts?"
 msgstr ""
 
-#: inc/customizer.php:359
+#: inc/customizer.php:371
 msgid "Hide the sidebar on index?"
 msgstr ""
 
-#: inc/customizer.php:375
+#: inc/customizer.php:387
 msgid "Hide the sidebar on single posts and pages?"
 msgstr ""
 
-#: inc/customizer.php:392
+#: inc/customizer.php:404
 msgid "Display the full content of your posts on index?"
 msgstr ""
 
-#: inc/customizer.php:408
+#: inc/customizer.php:420
 msgid "Hide featured images on index, archives?"
 msgstr ""
 
-#: inc/customizer.php:424
+#: inc/customizer.php:436
 msgid "Hide featured images on single posts?"
 msgstr ""
 
-#: inc/customizer.php:444
+#: inc/customizer.php:456
 msgid "Primary color"
 msgstr ""
 
-#: inc/customizer.php:466
+#: inc/customizer.php:478
 msgid "Social area background"
 msgstr ""
 
-#: inc/customizer.php:486
+#: inc/customizer.php:498
 msgid "Social icons"
 msgstr ""
 
-#: inc/customizer.php:507
+#: inc/customizer.php:519
 msgid "Branding background"
 msgstr ""
 
-#: inc/customizer.php:528
+#: inc/customizer.php:540
 msgid "Menu background"
 msgstr ""
 
-#: inc/customizer.php:549
+#: inc/customizer.php:561
 msgid "Menu items"
 msgstr ""
 
-#: inc/customizer.php:570 inc/customizer.php:769
+#: inc/customizer.php:582 inc/customizer.php:782
 msgid "Site title"
 msgstr ""
 
-#: inc/customizer.php:591 inc/customizer.php:789
+#: inc/customizer.php:603 inc/customizer.php:804
 msgid "Site description"
 msgstr ""
 
-#: inc/customizer.php:611
+#: inc/customizer.php:623
 msgid "Entry titles"
 msgstr ""
 
-#: inc/customizer.php:631
+#: inc/customizer.php:643
 msgid "Entry meta"
 msgstr ""
 
-#: inc/customizer.php:651
+#: inc/customizer.php:663
 msgid "Body text"
 msgstr ""
 
-#: inc/customizer.php:672
+#: inc/customizer.php:684
 msgid "Footer background"
 msgstr ""
 
-#: inc/customizer.php:683
+#: inc/customizer.php:695
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:685
+#: inc/customizer.php:697
 msgid ""
 "You can use any Google Fonts you want for the heading and/or body. See the "
 "fonts here: google.com/fonts. See the documentation if you need help with "
 "this: flyfreemedia.com/documentation/amadeus"
 msgstr ""
 
-#: inc/customizer.php:699
+#: inc/customizer.php:711
 msgid "Body font name/style/sets"
 msgstr ""
 
-#: inc/customizer.php:716
+#: inc/customizer.php:728
 msgid "Body font family"
 msgstr ""
 
-#: inc/customizer.php:733
+#: inc/customizer.php:745
 msgid "Headings font name/style/sets"
 msgstr ""
 
-#: inc/customizer.php:750
+#: inc/customizer.php:762
 msgid "Headings font family"
 msgstr ""
 
-#: inc/customizer.php:809
+#: inc/customizer.php:826
 msgid "H1 font size"
 msgstr ""
 
-#: inc/customizer.php:829
+#: inc/customizer.php:848
 msgid "H2 font size"
 msgstr ""
 
-#: inc/customizer.php:849
+#: inc/customizer.php:870
 msgid "H3 font size"
 msgstr ""
 
-#: inc/customizer.php:869
+#: inc/customizer.php:892
 msgid "H4 font size"
 msgstr ""
 
-#: inc/customizer.php:889
+#: inc/customizer.php:914
 msgid "H5 font size"
 msgstr ""
 
-#: inc/customizer.php:909
+#: inc/customizer.php:936
 msgid "H6 font size"
 msgstr ""
 
-#: inc/customizer.php:929
+#: inc/customizer.php:958
 msgid "Body font size"
 msgstr ""
 
-#: inc/customizer.php:941 inc/customizer.php:962 inc/customizer.php:980
-#: inc/customizer.php:998
+#: inc/customizer.php:972 inc/customizer.php:998 inc/customizer.php:1022
+#: inc/customizer.php:1046
 msgid "View PRO version"
 msgstr ""
 
-#: inc/customizer.php:954
+#: inc/customizer.php:990
 msgid "Extra Widget Area"
 msgstr ""
 
-#: inc/customizer.php:955 inc/customizer.php:992
+#: inc/customizer.php:991 inc/customizer.php:1040
 msgid "Alternative Layout"
 msgstr ""
 
-#: inc/customizer.php:956 inc/customizer.php:974
+#: inc/customizer.php:992 inc/customizer.php:1016
 msgid "Extra Colors"
 msgstr ""
 
-#: inc/customizer.php:957
+#: inc/customizer.php:993
 msgid "Extra Typography Options"
 msgstr ""
 
-#: inc/customizer.php:958
+#: inc/customizer.php:994
 msgid "Footer Credits"
 msgstr ""
 
-#: inc/customizer.php:959
+#: inc/customizer.php:995
 msgid "Support"
 msgstr ""
 
-#: inc/customizer.php:977
+#: inc/customizer.php:1019
 msgid ""
 "Change the color for header text, header buttons, widgets background and "
 "color, footer widgets title and article title."
 msgstr ""
 
-#: inc/customizer.php:995
+#: inc/customizer.php:1043
 msgid "Choose between 2 styles to display your posts on the front page."
 msgstr ""
 
@@ -787,66 +787,66 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:108 inc/template-tags.php:126
+#: inc/template-tags.php:109 inc/template-tags.php:127
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:111
+#: inc/template-tags.php:112
 #. translators: categories list
 msgid "%1$s"
 msgstr ""
 
-#: inc/template-tags.php:129
+#: inc/template-tags.php:130
 #. translators: tags list
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:149
+#: inc/template-tags.php:150
 #. translators: archive category
 msgid "Category: %s"
 msgstr ""
 
-#: inc/template-tags.php:152
+#: inc/template-tags.php:153
 #. translators: archive tag
 msgid "Tag: %s"
 msgstr ""
 
-#: inc/template-tags.php:155
+#: inc/template-tags.php:156
 #. translators: archive author
 msgid "Author: %s"
 msgstr ""
 
-#: inc/template-tags.php:158
+#: inc/template-tags.php:159
 #. translators: archive year
 msgid "Year: %s"
 msgstr ""
 
-#: inc/template-tags.php:161
+#: inc/template-tags.php:162
 #. translators: archive month
 msgid "Month: %s"
 msgstr ""
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:165
 #. translators: archive date
 msgid "Day: %s"
 msgstr ""
 
-#: inc/template-tags.php:187
+#: inc/template-tags.php:188
 #. translators: Archive title
 msgid "Archives: %s"
 msgstr ""
 
-#: inc/template-tags.php:191
+#: inc/template-tags.php:192
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: inc/template-tags.php:193
+#: inc/template-tags.php:194
 msgid "Archives"
 msgstr ""
 
-#: search.php:18
+#: search.php:19
 #. translators: Search query
 msgid "Search Results for: %s"
 msgstr ""
@@ -859,19 +859,19 @@ msgstr ""
 msgid "Amadeus: About me"
 msgstr ""
 
-#: widgets/about-me.php:101 widgets/recent-comments.php:148
+#: widgets/about-me.php:103 widgets/recent-comments.php:152
 msgid "Title:"
 msgstr ""
 
-#: widgets/about-me.php:104
+#: widgets/about-me.php:106
 msgid "Enter the URL for your photo"
 msgstr ""
 
-#: widgets/about-me.php:107
+#: widgets/about-me.php:109
 msgid "Add your text:"
 msgstr ""
 
-#: widgets/about-me.php:111
+#: widgets/about-me.php:113
 msgid "Automatically add paragraphs"
 msgstr ""
 
@@ -887,12 +887,12 @@ msgstr ""
 msgid "Recent Comments"
 msgstr ""
 
-#: widgets/recent-comments.php:97
+#: widgets/recent-comments.php:101
 #. translators: comments widget: 1: comment author, 2: post link
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: widgets/recent-comments.php:151
+#: widgets/recent-comments.php:155
 msgid "Number of comments to show:"
 msgstr ""
 
@@ -978,13 +978,13 @@ msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr ""
 
-#: comments.php:31
+#: comments.php:30
 #. translators: %s: post title
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
-#: comments.php:35
+#: comments.php:34
 #. translators: 1: number of comments, 2: post title
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
@@ -992,74 +992,74 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/template-tags.php:87
+#: inc/template-tags.php:88
 #. translators: post date
 msgctxt "post date"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:98
+#: inc/template-tags.php:99
 #. translators: Author link
 msgctxt "post author"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:158
+#: inc/template-tags.php:159
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/template-tags.php:161
+#: inc/template-tags.php:162
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:165
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:167
+#: inc/template-tags.php:168
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/template-tags.php:169
+#: inc/template-tags.php:170
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/template-tags.php:171
+#: inc/template-tags.php:172
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/template-tags.php:173
+#: inc/template-tags.php:174
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/template-tags.php:175
+#: inc/template-tags.php:176
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/template-tags.php:177
+#: inc/template-tags.php:178
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/template-tags.php:179
+#: inc/template-tags.php:180
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/template-tags.php:181
+#: inc/template-tags.php:182
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/template-tags.php:183
+#: inc/template-tags.php:184
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
