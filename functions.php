@@ -235,6 +235,12 @@ function amadeus_register_required_plugins() {
 	$plugins = array(
 
 		array(
+			'name'      => 'Orbit Fox',
+			'slug'      => 'themeisle-companion',
+			'required'  => false,
+		),
+
+		array(
 			'name'      => 'Nivo Slider Lite',
 			'slug'      => 'nivo-slider-lite',
 			'required'  => false,
