@@ -9,7 +9,7 @@
 ?>
 
 	</div><!-- #content -->
-	
+
 	<?php if ( is_active_sidebar( 'sidebar-4' ) || is_active_sidebar( 'sidebar-5' ) || is_active_sidebar( 'sidebar-6' ) ) : ?>
 		<?php get_sidebar( 'footer' ); ?>
 	<?php endif; ?>
