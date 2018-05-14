@@ -61,11 +61,11 @@
 			<div class="container">
 				<div class="site-branding">
 					<?php
-					if ( function_exists( 'the_custom_logo' ) && ( get_theme_mod( 'logo_style', 'hide-title' ) == 'hide-title' ) ) {
+					if ( function_exists( 'the_custom_logo' ) && get_theme_mod( 'custom_logo' ) && ( get_theme_mod( 'logo_style', 'hide-title' ) == 'hide-title' ) ) {
 						the_custom_logo();
 					} // End if().
 
-					elseif ( function_exists( 'the_custom_logo' ) && ( get_theme_mod( 'logo_style', 'hide-title' ) == 'show-title' ) ) {
+					elseif ( function_exists( 'the_custom_logo' ) && get_theme_mod( 'custom_logo' ) && ( get_theme_mod( 'logo_style', 'hide-title' ) == 'show-title' ) ) {
 						the_custom_logo();
 
 						?>
