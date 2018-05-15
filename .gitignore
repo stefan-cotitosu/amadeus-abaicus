@@ -6,4 +6,3 @@ gen
 node_modules
 logs
 npm-debug.log
-package-lock.json
