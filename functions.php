@@ -5,6 +5,23 @@
  * @package Amadeus
  */
 
+$vendor_file = trailingslashit( get_template_directory() ) . 'vendor/autoload.php';
+if ( is_readable( $vendor_file ) ) {
+	require_once $vendor_file;
+}
+add_filter( 'themeisle_sdk_products', 'amadeus_load_sdk' );
+/**
+ * Loads products array.
+ *
+ * @param array $products All products.
+ *
+ * @return array Products array.
+ */
+function amadeus_load_sdk( $products ) {
+	$products[] = get_template_directory() . '/style.css';
+
+	return $products;
+}
 
 if ( ! function_exists( 'amadeus_setup' ) ) :
 	/**

@@ -1,13 +1,9 @@
 {
   "name": "amadeus",
   "nicename": "Amadeus",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Amadeus theme",
   "category": "themes",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Codeinwp/amadeus.git"
-  },
   "keywords": [
     "wordpress-theme"
   ],
