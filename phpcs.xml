@@ -9,6 +9,8 @@
         <exclude name="Squiz.Commenting.FileComment.SpacingAfterComment" />
         <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
+        <exclude name="Squiz.PHP.CommentedOutCode.Found" />
+        <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
         <exclude name="Squiz.Commenting.InlineComment.NotCapital" />
 
         <exclude name="WordPress.PHP.YodaConditions.NotYoda" />

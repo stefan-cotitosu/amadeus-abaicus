@@ -1,4 +1,9 @@
 
+### 2.0.7 - 02/05/2018
+**Changes:** 
+- Updated grunt files
+- Compatibility with Orbit Fox plugin
+
 ### 2.0.6 - 07/08/2017
 
 **Changes:** 
