@@ -388,3 +388,12 @@ function amadeus_post_class( $classes ) {
 	return $classes;
 }
 add_filter( 'post_class', 'amadeus_post_class' );
+
+/**
+ * Add Read More button on blog posts
+ */
+function amadeus_read_more() {
+	$read_more = sprintf( '<a href="%s"> Continue reading</a>', get_permalink() );
+	return $read_more;
+}
+add_filter( 'excerpt_more', 'amadeus_read_more' );
