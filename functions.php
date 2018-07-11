@@ -242,6 +242,14 @@ function amadeus_customizer_styles() {
 }
 add_action( 'customize_controls_print_styles', 'amadeus_customizer_styles' );
 
+/**
+ * Add theme support for WooCommerce
+ */
+add_theme_support( 'woocommerce' );
+
+/* Remove Blog sidebar from shop */
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
 /* tgm-plugin-activation */
 require_once get_template_directory() . '/class-tgm-plugin-activation.php';
 
